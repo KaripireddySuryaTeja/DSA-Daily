@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespacestd;
+class Solution {
+public:
+    long long maximumMedianSum(vector<int>& nums) {
+        sort(nums.begin(),nums.end());
+        int n=nums.size(),g=n/3;
+        long long res=0;
+        
+        for(int i=0;i<g;i++){
+                res+=nums[n-2-2*i];
+        }
+        return res;
+    }
+};
+
+int main(){
+  Solution sol;
+  int t;
+  cout<<"Enter Number of testcases:";
+  cin>>t;
+  while(t--){
+    int n;
+    cout<<"Enter size of array:";
+    cin>>n;
+    int arr[n];
+    cout<<"Enter array:";
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+  }
+  long long res=maximumMedinSum(nums);
+  cout<<"result:"<<res;
+  return 0;
+}
