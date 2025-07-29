@@ -1,3 +1,5 @@
+#include <bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
     vector<int> smallestSubarrays(vector<int>& nums) {
@@ -19,11 +21,14 @@ int main(){
   int n;
   cout<<"Enter size of array:";
   cin>>n;
-  cout<<"Enter Array:"
-  vector<int> n;
-  for(int i=0;i<n;i++){
+  cout<<"Enter Array:";
+  vector<int> a(n);
+  for(int i=0;i<n; i++){
     cin>>a[i];
   }
-  smallestSubarrays(nums);
+  vector<int> result = sol.smallestSubarrays(a);
+  for (int res : result) {
+      cout << res << " ";
+  }
   return 0;
 }
